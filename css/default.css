@@ -1,0 +1,13 @@
+a.main-link {
+    text-decoration: none;
+    color: #000;
+}
+
+#error-block {
+    display: none;
+}
+
+.footer p {
+    text-align: center;
+    margin: 0;
+}
