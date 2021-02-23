@@ -21,8 +21,8 @@
 				<button type="submit" class="btn btn-success mt-3">Войти</button>
 			</form>
       <?php else: ?>
-         <h2>Welcome!</h2>
-         <button class="btn btn-danger exit-btn">Exit</button>
+         <h2>Добро пожаловать в Ваш личный кабинет.</h2>
+         
       <?php endif; ?>
 		</div>
 	</div>

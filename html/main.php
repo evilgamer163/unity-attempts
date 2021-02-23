@@ -1,22 +1,15 @@
 <div class="col-12 col-md-8 p-3">
-    <h2>Основной контент</h2>
+	<?php 
+		require_once "php/mysql_connect.php";
 
-    <h4>Subtitle</h4>
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Tempore vitae corrupti porro ea veniam, voluptates ab aliquid 
-        quaerat! Soluta cupiditate laborum pariatur aliquam maiores suscipit sed vero nobis sint eum.
-    </p>
-
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium tempore repudiandae at eius, 
-        libero officia, iste laborum beatae obcaecati, voluptatibus excepturi id ducimus atque voluptatum 
-        sapiente! Nisi aperiam ea distinctio!
-    </p>
-
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur corporis magni quos! Hic possimus, 
-        sint itaque nam asperiores enim similique iste magni excepturi recusandae deserunt 
-        repellendus eligendi quos ipsam est?
-    </p>
+		$sql = "SELECT * FROM articles ORDER BY `date` DESC";
+		$query = $pdo->query($sql);
+		while($row = $query->fetch(PDO::FETCH_OBJ)) {
+			echo "<h2>$row->title</h2>
+				<p>$row->autor<p>
+				<a href='/news.php?id=$row->id' class='btn btn-warning mb-4'>Читать далее</a>
+			";
+		}
+	?>
+	
 </div>

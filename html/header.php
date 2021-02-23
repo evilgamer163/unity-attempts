@@ -25,14 +25,17 @@
     <header class="d-flex flex-column flex-md-row justify-content-between align-items-center p-3 px-md-4 mb-3 bg-body border-bottom shadow-sm">
         <a href="/" class="h5 my-0 me-md-auto fw-normal main-link">UNITY-потуги</a>
         <div>
+        <a class="btn btn-outline-primary" href="contacts.php">Свяжитесь с нами!</a>
+
             <?php if($_COOKIE['mail'] != ''):?>
                 <a class="btn btn-outline-primary" href="article.php">Добавить статью</a>
                 <a class="btn btn-outline-primary" href="auth.php">Личный кабинет</a>
+                <button class="btn btn-danger exit-btn">Выход</button>
             <?php endif; ?>
 
             <?php if($_COOKIE['mail'] == ''): ?>
                 <a class="btn btn-outline-primary" href="auth.php">Вход</a>
-                <a class="btn btn-outline-primary" href="/registration.php">Регистрация</a>
+                <a class="btn btn-outline-primary" href="registration.php">Регистрация</a>
             <?php endif; ?>
         </div>
     </header>

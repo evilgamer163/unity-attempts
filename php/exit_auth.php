@@ -1,1 +1,4 @@
-<?php setcookie("mail", $mail, time() - 3600 * 24 * 30, "/"); ?>
+<?php 
+   setcookie("mail", "", time() - 3600 * 24 * 30, "/"); 
+   unset($_COOKIE['mail']);   
+?>
