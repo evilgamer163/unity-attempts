@@ -7,7 +7,7 @@
 
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js">
+    <link rel="text/javascript" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js">
 
     <!-- favicon -->
     <link rel="icon" href="/img/favicon.ico">
@@ -25,7 +25,14 @@
     <header class="d-flex flex-column flex-md-row justify-content-between align-items-center p-3 px-md-4 mb-3 bg-body border-bottom shadow-sm">
         <a href="/" class="h5 my-0 me-md-auto fw-normal main-link">UNITY-потуги</a>
         <div>
-            <a class="btn btn-outline-primary" href="auth.php">Вход</a>
-            <a class="btn btn-outline-primary" href="/registration.php">Регистрация</a>
+            <?php if($_COOKIE['mail'] != ''):?>
+                <a class="btn btn-outline-primary" href="article.php">Добавить статью</a>
+                <a class="btn btn-outline-primary" href="auth.php">Личный кабинет</a>
+            <?php endif; ?>
+
+            <?php if($_COOKIE['mail'] == ''): ?>
+                <a class="btn btn-outline-primary" href="auth.php">Вход</a>
+                <a class="btn btn-outline-primary" href="/registration.php">Регистрация</a>
+            <?php endif; ?>
         </div>
     </header>
