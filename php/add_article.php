@@ -6,7 +6,7 @@
 
 	require_once "./mysql_connect.php";
 
-	$sql = "INSERT INTO articles(title, text, date, autor), VALUES(?, ?, ?, ?)"; //sql-запрос
+	$sql = "INSERT INTO articles(title, text, date, autor) VALUES(?, ?, ?, ?)"; //sql-запрос
 	$query = $pdo->prepare($sql); //подготовка запроса
 	$query->execute([$title, $text, $date, $autor]); //выполнение запроса
 

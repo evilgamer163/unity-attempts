@@ -20,7 +20,7 @@
 				<input type="text" id="title" name="title" class="form-control mb-2">
 
 				<label for="text">Текст статьи</label>
-				<textarea type="text" id="text" name="text" class="form-control mb-2"></textarea>
+				<textarea id="text" name="text" class="form-control mb-2"></textarea>
 
 				<div class="alert alert-danger mt-3 mb-0" id="error-block"></div>
 
