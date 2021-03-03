@@ -12,3 +12,6 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
+Route::post('/contact/submit', function () {
+    dd(Request::all());
+})->name('contact-form');

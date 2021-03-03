@@ -1,4 +1,8 @@
+header nav {
+  position: relative !important;
+}
+
 .content {
-  padding: 100px;
+  padding-top: 20px;
 }
 
