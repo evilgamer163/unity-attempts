@@ -12,6 +12,10 @@
 					<li class="nav-item">
 						<a class="nav-link" href="/contact" tabindex="-1" aria-disabled="true">Контакты</a>
 					</li>
+
+					<li class="nav-item">
+						<a class="nav-link" href="{{ route('contact-all') }}" tabindex="-1" aria-disabled="true">Сообщения</a>
+					</li>
 				</ul>
 
 				<form class="d-flex">

@@ -17,6 +17,8 @@
       <!-- <h1 style="padding-top: 100px;">Ты пидор</h1> -->
    @endif
 
+	@include('includes.messages')
+
 	<div class="content">
 	<div class="container">
 		<div class="row">
