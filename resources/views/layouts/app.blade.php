@@ -13,9 +13,9 @@
 <body>
 	@include('includes.header')
 
-	@if(Request::is('/'))
-		<!-- <h1 style="padding-top: 100px;">Ты пидор</h1> -->
-	@endif
+   @if(Request::is('/'))
+      <!-- <h1 style="padding-top: 100px;">Ты пидор</h1> -->
+   @endif
 
 	<div class="content">
 	<div class="container">
