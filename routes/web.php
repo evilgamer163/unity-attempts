@@ -13,8 +13,15 @@ Route::get('/contact', function () {
 });
 
 Route::get('/contact-data', function () {
-	return view('contact-data');
-});
+	return view('messages');
+})->name('contact-data');
 
 Route::post('/contact/submit', 'ContactController@submit')->name('contact-form');
-Route::get('/contac/tall', 'ContactController@getData')->name('contact-all');
+
+Route::get('/contact/all/{id}/update', 'ContactController@update')->name('contact-update');
+Route::post('/contact/all/{id}/update', 'ContactController@updateSubmit')->name('contact-update-submit');
+
+Route::get('/contact/all/{id}/del', 'ContactController@deleteMsg')->name('contact-del');
+
+Route::get('/contac/all', 'ContactController@getData')->name('contact-all');
+Route::get('/contac/all/{id}', 'ContactController@showOneMas')->name('contact-id-msg');
